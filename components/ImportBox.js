@@ -14,7 +14,7 @@ const ImportBox = () => {
     const sendPost = (e) => {
         e.preventDefault()
         if (!inputRef.current.value) return;
-        db.collection('post').add({
+        db.collection('posts').add({
             message: inputRef.current.value,
             name: session.user.name,
             email: session.user.email,
